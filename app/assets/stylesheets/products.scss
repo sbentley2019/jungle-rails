@@ -51,6 +51,20 @@ main section.categories-show {
         font-size: 0.8em;
       }
 
+      aside.status {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8px;
+        color: white;
+        background-color: rgb(230, 127, 127);
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 20px;
+        font-size: 1em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
       &:hover {
 
         border-color: #999;
