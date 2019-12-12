@@ -6,35 +6,36 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+  </div>
+
+  <div class="panel panel-default items">
     <table class="table table-bordered">
-    <thead>
-          <tr>
-            <th colspan="2">Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
       <tbody>
-        <% @products.each do |product| %>
-          <%= render 'product', product: product %>
-        <% end %>
+        <%= render 'product' %>
       </tbody>
       <tfoot>
-          <tr>
-            <th>
-              Email:
-            </th>
-            <th>
-              <%= @order.email %>
-            </th>          
-            <th>
-              TOTAL:
-            </th>
-            <th>
-              <%= humanized_money_with_symbol @order.total_cents / 100.0 %>
-            </th>
-          </tr>
-        </tfoot>
+        <tr>
+          <th>
+            Email:
+          </th>
+          <th>
+            <%= @order.email %>
+          </th>          
+          <th>
+            TOTAL:
+          </th>
+          <th>
+            <%= humanized_money_with_symbol@order.total_cents / 100.0 %>
+          </th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 

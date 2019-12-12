@@ -3,8 +3,8 @@
   <% if enhanced_cart.empty? %>
     <div class="alert alert-info text-center" role="alert">
       <h1>Your cart is empty</h1>
-      <p>Click <a href="/" class="alert-link">here</a> to return to home<p/>
     </div>
+    <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary text-center' %>
   <% else %>
     <header class="page-header">
       <h1>My Cart</h1>
