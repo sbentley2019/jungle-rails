@@ -1,18 +1,16 @@
-<% @products.each do |product| %>
-  <tr>
-    <td>
-      <%= image_tag product.image.tiny %>
-    </td>
-    <td>
-      <h4><%= product.name %></h4>
-      <br>
-      <p><%= product.description %></p>
-    </td>
-    <td>
-      <%= product.quantity %>
-    </td>
-    <td>
-      <%= humanized_money_with_symbol   product.total_price_cents / 100.0 %>
-    </td>
-  </tr>
-<% end %>
+<tr>
+  <td>
+    <%= image_tag product.image.tiny %>
+  </td>
+  <td>
+    <h4><%= product.name %></h4>
+    <br>
+    <p><%= product.description %></p>
+  </td>
+  <td>
+    <%= product.quantity %>
+  </td>
+  <td>
+    <%= humanized_money_with_symbol   product.total_price_cents / 100.0 %>
+  </td>
+</tr>
